@@ -3,8 +3,8 @@ import "../assets/css/UploadFrame.css"
 
 function UploadImage() {
   return (
-    <>
-        <div className="col-span-2 md:col-span-1 flex">
+      <>
+        <div className="gap-4 col-span-2 md:col-span-1 flex">
               <div class="col-span-2 md:col-span-1">
                 <label for="image" class="form-label">Upload Image</label>
                 <div class="image-upload-wrapper">
@@ -23,7 +23,7 @@ function UploadImage() {
                 <input type="text" id="package_name" name="package_name" class="form-input" required/>
             </div>
         </div>
-        </>
+      </>
   )
 }
 
