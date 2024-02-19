@@ -4,7 +4,9 @@ import PackageItem from "../components/Package_item";
 const Dashboard = () => {
     return (
         <>
-            <PageLayout children={<PackageItem />} />
+            <PageLayout> 
+                <PackageItem />
+            </PageLayout>
         </>
     );
 };
