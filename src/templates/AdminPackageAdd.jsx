@@ -1,11 +1,11 @@
 import PageLayout from '../components/PageLayout'
-import UploadImage from '../components/UploadImage';
+import PackageDetailsForm from '../components/PackageDetailsForm'
 
 const AdminPackageAdd = () => {
 	return (
 		<>	
 			<PageLayout>
-				<UploadImage />
+				<PackageDetailsForm />
 			</PageLayout>			
 		</>
 	);
