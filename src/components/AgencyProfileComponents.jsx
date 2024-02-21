@@ -66,8 +66,8 @@ const AgencyProfileComponents =()=>{
     return(
         <div className="container mx-auto mt-8 px-4">
             <div className="bg-white rounded-lg shadow-md">
+                <CoverPhoto/>
                 <div className="p-6">
-                    <CoverPhoto/>
                     <ProfileInformation/>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <ContactInformation/>
