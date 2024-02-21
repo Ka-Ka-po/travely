@@ -1,13 +1,13 @@
-import PageLayout from '../components/PageLayout'
-import PackageDetailsForm from '../components/PackageDetailsForm'
+import PageLayout from "../components/PageLayout";
+import PackageDetailsForm from "../components/PackageDetailsForm";
 
 const AdminPackageAdd = () => {
-	return (
-		<>	
-			<PageLayout>
-				<PackageDetailsForm />
-			</PageLayout>			
-		</>
-	);
-}
-export default AdminPackageAdd
+    return (
+        <>
+            <PageLayout>
+                <PackageDetailsForm />
+            </PageLayout>
+        </>
+    );
+};
+export default AdminPackageAdd;
