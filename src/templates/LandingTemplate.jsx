@@ -1,6 +1,7 @@
 import TemplateCardContainer from "../components/TemplateCardContainer";
-const LandingTemplate = (
-    <>
+function LandingTemplate (){
+    return(
+        <>
         <div className='container mx-auto p-8'>
             <h1 className='text-3xl text-center font-bold mb-8'>
                 Reference Templates
@@ -12,11 +13,12 @@ const LandingTemplate = (
         {/* <!-- Preview Button --> */}
         <div className='my-8 flex justify-center'>
             <a
-                href='#'
+                href='/dashboard'
                 className='my-8 bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded'>
                 Preview Application
             </a>
         </div>
     </>
-);
+    );
+}
 export default LandingTemplate;
