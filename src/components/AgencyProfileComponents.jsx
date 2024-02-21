@@ -1,37 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Agency Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-  <header class="bg-gray-900 text-white py-4">
-    <h1 class="text-center">Travel Agency Profile</h1>
-  </header>
-  <div class="container mx-auto mt-8 px-4">
-    <div class="bg-white rounded-lg shadow-md">
-      <!-- Cover Photo -->
-      <div class="bg-gray-300 h-64 flex items-center justify-center bg-center bg-no-repeat">
-        <img src="" alt="Cover Photo" class="w-full h-full object-cover">
+import React from 'react';
+
+const CoverPhoto = () => {
+    return(
+        <div class="bg-gray-300 h-64 flex items-center justify-center bg-center bg-no-repeat">
+        <img src="" alt="Cover Photo" class="w-full h-full object-cover"/>
       </div>
-      <!-- Profile Information -->
-      <div class="p-6">
+      
+    );
+}
+const ProfileInformation = () =>{
+    return(
         <div class="flex items-center justify-between mb-4">
           <h2 class="text-2xl font-semibold">XYZ Travel Agency</h2>
           <button type="submit" class="bg-gray-900 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors duration-300">Edit Profile</button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- Contact Information -->
-          <div>
+    );
+}
+const ContactInformation = () =>{
+    return(
+        <div>
             <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
             <p class="mb-2"><strong>Email:</strong> info@xyztravelagency.com</p>
             <p class="mb-2"><strong>Phone:</strong> +1 234 567 890</p>
             <p class="mb-2"><strong>Address:</strong> 123 Main St, City, Country</p>
           </div>
-          <!-- About Us -->
-          <div>
+    );
+}
+const AboutUs = () =>{
+    return(
+        <div>
             <h3 class="text-xl font-semibold mb-2">About Us</h3>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
             <h3 class="text-xl font-semibold mb-2">Our Services</h3>
@@ -42,8 +39,10 @@
               <li class="mb-1">Car Rentals</li>
             </ul>
           </div>
-        </div>
-        <!-- Location -->
+    );
+}
+const Location = () => {
+    return(
         <div class="mt-6">
           <h3 class="text-xl font-semibold mb-2">Locations</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -61,8 +60,23 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+    );
+}
+const AgencyProfileComponents =()=>{
+    return(
+        <div class="container mx-auto mt-8 px-4">
+            <div class="bg-white rounded-lg shadow-md">
+                <div class="p-6">
+                    <CoverPhoto/>
+                    <ProfileInformation/>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ContactInformation/>
+                        <AboutUs/>
+                    </div>
+                    <Location/>
+                </div>
+            </div>
+        </div>
+    );
+}
+export default AgencyProfileComponents
