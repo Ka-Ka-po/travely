@@ -10,7 +10,8 @@ export const PackageDetails = ({packageState,setPackageState}) => {
     return (
         <>
             <div>
-                <div className="gap-4 col-span-2 md:col-span-1 flex">
+                <h2 class="text-2xl font-semibold mb-4">Package Details</h2>
+                <div class="grid grid-cols-2 gap-4">
                     <div className="col-span-2 md:col-span-1">
                         <label htmlFor="image" className="form-label">Upload Image</label>
                         <div className="image-upload-wrapper">
@@ -149,7 +150,6 @@ const OtherInformation = ({packageState, setPackageState}) => {
                 </div>
             </div>
             <div></div>
-           
         </div>
     );
 };
@@ -179,9 +179,10 @@ const PackageDetailsForm = () => {
             <div className='bg-white rounded-lg shadow-md p-6 grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <PackageDetails packageState={packageState} setPackageState={setPackageState}/>
                 <OtherInformation packageState={packageState}  setPackageState={setPackageState} />
+                <div></div>
                 <div className='flex justify-end'>
                     <button
-                        onClick={() => handleAddPackage()}
+                        onClick={handleAddPackage}
                         type='submit'
                         className='bg-gray-900 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors duration-300'>
                         Add Package
