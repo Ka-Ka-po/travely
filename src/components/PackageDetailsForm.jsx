@@ -10,8 +10,8 @@ export const PackageDetails = ({packageState,setPackageState}) => {
     return (
         <>
             <div>
-                <h2 class="text-2xl font-semibold mb-4">Package Details</h2>
-                <div class="grid grid-cols-2 gap-4">
+                <h2 className="text-2xl font-semibold mb-4">Package Details</h2>
+                <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-2 md:col-span-1">
                         <label htmlFor="image" className="form-label">Upload Image</label>
                         <div className="image-upload-wrapper">
@@ -157,7 +157,7 @@ const PackageDetailsForm = () => {
 
     const dispatch = useDispatch();
 
-    const [packageState, setPackageState] = useState({
+    const initialState = {
         id: uuidv4(),
         packageName: '',
         destination: '',
@@ -167,12 +167,15 @@ const PackageDetailsForm = () => {
         endDate: '',
         price: 0,
         discount: 0,
-    })
+    }
+
+    const [packageState, setPackageState] = useState(initialState)
     console.log("packageState", packageState)
     const handleAddPackage = () => {
         console.log("Package Added: ", packageState)
     
         dispatch(addPackage([packageState]))
+        setPackageState(initialState)
     }
     return (
         <>
