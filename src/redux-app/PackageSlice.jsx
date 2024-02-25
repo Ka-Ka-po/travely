@@ -4,8 +4,8 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = [
 		{
 			id: 1,
-	        packageName: 'Null',
-	        imageUrl: 'd1_img', 
+	        packageName: 'Summer Vacation',
+	        imageUrl: 'd1_img.png', 
 	        destination: 'Bouddhanath Temple',
 	        description: 'Null',
 	        duration: 'Null',
@@ -16,8 +16,8 @@ const initialState = [
 		},
 		{
 			id: 2,
-	        packageName: 'Null',
-	        imageUrl: 'd2_img', 
+	        packageName: 'Ready for Fun !!',
+	        imageUrl: 'd2_img.png', 
 	        destination: 'Sauraha, Chitwan',
 	        description: 'Null',
 	        duration: 'Null',
@@ -28,8 +28,8 @@ const initialState = [
 		},
 		{
 			id: 3,
-	        packageName: 'Null',
-	        imageUrl: 'd3_img', 
+	        packageName: 'Tato chiya mitho chiya',
+	        imageUrl: 'd3_img.png', 
 	        destination: 'Illam',
 	        description: 'Null',
 	        duration: 'Null',
@@ -40,8 +40,8 @@ const initialState = [
 		},
 		{
 			id: 4,
-	        packageName: 'Null',
-	        imageUrl: 'd4_img', 
+	        packageName: 'Jio Hajaro Saal',
+	        imageUrl: 'd4_img.png', 
 	        destination: 'Lumbini',
 	        description: 'Null',
 	        duration: 'Null',
