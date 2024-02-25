@@ -14,9 +14,6 @@ function Header() {
                 <a href='/admin-package-add' className='mx-2'>
                     Add Package
                 </a>
-                <a href='/order-package' className='mx-2'>
-                    Order Package
-                </a>
             </nav>
         </>
     );
