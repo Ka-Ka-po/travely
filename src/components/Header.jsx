@@ -1,22 +1,14 @@
+import { Link } from "react-router-dom"
 function Header() {
     return (
         <>
-            <header class='bg-gray-900 text-white py-4'>
-                <h1 class='text-center'>Destination Travel Packages</h1>
+            <header className='bg-gray-900 text-white py-4'>
+                <h1 className='text-center'>Destination Travel Packages</h1>
             </header>
-            <nav class='bg-gray-800 text-white py-2'>
-                <a href='/dashboard' class='mx-2'>
-                    Dashboard
-                </a>
-                <a href='/agency-profile' class='mx-2'>
-                    Agency Profile
-                </a>
-                <a href='/admin-package-add' class='mx-2'>
-                    Add Package
-                </a>
-                <a href='/order-package' class='mx-2'>
-                    Order Package
-                </a>
+            <nav className='bg-gray-800 text-white py-2'>
+                <Link to="/dashboard" className="mx-2">Dashboard</Link>
+                <Link to="/agency-profile" className="mx-2">Agency Profile</Link>
+                <Link to="/admin-package-add" className="mx-2">Add Package</Link>
             </nav>
         </>
     );
