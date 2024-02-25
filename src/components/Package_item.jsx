@@ -59,7 +59,7 @@ export const Item = ({ props ,showButton}) => {
                 {
                     showButton &&
                     (
-                        <Link to={`/order-package/${id}`} className="bg-gray-900 text-white text-center py-2 px-4 rounded mt-4">
+                        <Link to={`/order-package/${id}`} className="bg-gray-900 hover:bg-gray-700 text-white text-center py-2 px-4 rounded mt-4">
                             Order Package
                         </Link>
                     )
