@@ -1,48 +1,53 @@
 import React from "react";
 // import all_packages from "../assets/all_packages.js";
 import { useSelector } from 'react-redux'
+import { Link } from "react-router-dom"
 
-export const Item = ({ props }) => {
+export const Item = ({ props ,showButton}) => {
     console.log("Item: ", props);
-    const { packageName, imageUrl, price } = props;
+    const { id, destination, packageName, imageUrl, description, startDate, endDate, duration, price } = props;
+
+    const handleOrder = (e) => {
+        const packageId = e.target.id;
+        console.log(`Package ID: ${packageId} ordered`)
+    }
     return (
         <div className='bg-white rounded-lg shadow-md p-6'>
             <a href='#' className='text-lg font-semibold text-gray-900 mb-4 block'>
-                {packageName}
+                {destination}
             </a>
             <a href='#'>
-                <img src={`http://localhost/assets/${imageUrl}.png`} alt='Travel Agency' className='mb-4 rounded-lg' />
+                <img src={`/packages/${imageUrl}`} alt='Travel Agency' className='mb-4 rounded-lg' />
             </a>
             <div className='grid grid-cols-2 gap-2'>
                 <div className='col-span-2'>
                     <p className='text-gray-700'>
-                        <strong>Package Name:</strong> Package 2
+                        <strong>Package Name:</strong> {packageName}
                     </p>
                 </div>
                 <div className='col-span-2'>
                     <p className='text-gray-700'>
-                        <strong>Destination:</strong> Destination Name
+                        <strong>Agency:</strong> Agency Name
                     </p>
                 </div>
                 <div className='col-span-2'>
                     <p className='text-gray-700'>
-                        <strong>Description:</strong> Description of Package 2
-                        goes here.
+                        <strong>Description:</strong> {description}
                     </p>
                 </div>
                 <div>
                     <p className='text-gray-700'>
-                        <strong>Start Date:</strong> January 1, 2024
+                        <strong>Start Date:</strong> {startDate}
                     </p>
                 </div>
                 <div>
                     <p className='text-gray-700'>
-                        <strong>End Date:</strong> January 7, 2024
+                        <strong>End Date:</strong> {endDate}
                     </p>
                 </div>
                 <div>
                     <p className='text-gray-700'>
-                        <strong>Duration:</strong> 7 days
+                        <strong>Duration:</strong> {duration}
                     </p>
                 </div>
                 <div className='col-span-2 mt-2'>
@@ -50,6 +55,15 @@ export const Item = ({ props }) => {
                         <strong>Price:</strong> Rs {price}
                     </p>
                 </div>
+
+                {
+                    showButton &&
+                    (
+                        <Link to={`/order-package/${id}`} className="bg-gray-900 text-white text-center py-2 px-4 rounded mt-4">
+                            Order Package
+                        </Link>
+                    )
+                }
             </div>
         </div>
     );
@@ -60,14 +74,9 @@ const Package_item = () => {
     return (
         <div className='container mx-auto mt-8 px-4'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
-                {allPackages.map((item, i) => {
-                    return (
-                        <Item
-                            key={i}
-                            props={item}
-                        />
-                    );
-                })}
+                {
+                    allPackages.map((item, i) => <Item key={i} props={item} showButton={true}/>)
+                }
             </div>
         </div>
     );

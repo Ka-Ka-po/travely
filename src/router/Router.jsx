@@ -17,7 +17,7 @@ const Router = () => {
                         path='/admin-package-add'
                         element={<AdminPackageAdd />}
                     />
-                    <Route path='/order-package' element={<OrderPackage />} />
+                    <Route path='/order-package/:packageId' element={<OrderPackage />} />
                 </Routes>
             </BrowserRouter>
         </>
