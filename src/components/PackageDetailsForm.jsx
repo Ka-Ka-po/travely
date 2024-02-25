@@ -2,6 +2,8 @@ import UploadImage from "../components/UploadImage";
 import {useState} from "react"
 import {v4 as uuidv4} from 'uuid'
 
+import { addPackage } from '../redux-app/PackageSlice'
+import { useSelector, useDispatch } from 'react-redux'
 
 export const PackageDetails = ({packageState,setPackageState}) => {
 
@@ -153,6 +155,8 @@ const OtherInformation = ({packageState, setPackageState}) => {
 };
 const PackageDetailsForm = () => {
 
+    const dispatch = useDispatch();
+
     const [packageState, setPackageState] = useState({
         id: uuidv4(),
         packageName: '',
@@ -168,6 +172,7 @@ const PackageDetailsForm = () => {
     const handleAddPackage = () => {
         console.log("Package Added: ", packageState)
     
+        dispatch(addPackage([packageState]))
     }
     return (
         <>
